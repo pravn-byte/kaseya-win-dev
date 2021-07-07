@@ -15,11 +15,14 @@ node {
     git branch: 'main',
        url: 'https://github.com/pravn-byte/kaseya-win-dev.git'
     }
-    ansiblePlaybook( 
-        playbook: 'ssh_win_access.yml',
-        inventory: server + ',',
-        extras: '-e ansible_user=' + ansible_user + ' ansible_pass=' + ansible_pass
-    )
+    
+    stage('Deploy') {
+       ansiblePlaybook( 
+          playbook: 'ssh_win_access.yml',
+          inventory: server + ',',
+          extras: '-e ansible_user=' + ansible_user + ' ansible_pass=' + ansible_pass
+       )
+    }
     stage('clearout') {
         deleteDir()
     }
