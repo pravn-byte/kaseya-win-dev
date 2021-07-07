@@ -14,7 +14,7 @@ node {
     stage ('Checkout') {
     git branch: 'main',
        url: 'https://github.com/pravn-byte/kaseya-demo.git'
-	}
+    }
     ansiblePlaybook( 
         playbook: 'ssh_win_access.yml',
         inventory: server + ',',
