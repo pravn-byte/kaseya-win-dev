@@ -20,7 +20,7 @@ node {
        ansiblePlaybook( 
           playbook: 'ssh_win_access.yml',
           inventory: server + ',',
-          extras: '-e '{ansible_user=' + ansible_user + ' ansible_pass=' + ansible_pass +'}'
+          extras: '-e '\'{\"ansible_user\":\"' + ansible_user + '\" \"ansible_pass\":\"' + ansible_pass +\"}\''
        )
     }
     stage('clearout') {
