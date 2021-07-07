@@ -1,7 +1,7 @@
 // Build Parameters
 properties([ parameters([
   string( name: 'WINDOWS_SERVER_ADMIN', defaultValue: 'Administrator'),
-  string( name: 'WINDOWS_SERVER_PASS', defaultValue: 'Praveen@1234')
+  string( name: 'WINDOWS_SERVER_PASS', defaultValue: 'Praveen@1234'),
   string( name: 'WINDOWS_SERVER_IP', defaultValue: '52.14.180.52')
 ]), pipelineTriggers([]) ])
 
