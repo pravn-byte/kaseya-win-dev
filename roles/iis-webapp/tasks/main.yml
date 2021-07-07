@@ -1,0 +1,5 @@
+---
+- name: "Create ping directory."
+  win_file:
+    path: c:\inetpub\ping
+    state: directory
